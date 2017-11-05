@@ -1,5 +1,8 @@
+let OSInfo = require('../modules/OSInfo');
+OSInfo.print();
+
 process.stdin.setEncoding('utf-8');
-process.stdin.on('readable', function(){
+process.stdin.on('readable', function() {
     return process.env;
     return process.versions;
     let input = process.stdin.read();
@@ -11,12 +14,13 @@ process.stdin.on('readable', function(){
                 process.exit();
                 break;
             }
+            case '/getOSinfo': {
+                getOsInfo();
+                break;
+            }
             default:
                 process.stderr.write('Wrong instruction\n');
                 break;
             };
         };
 });
-
-/*Najpierw działało, przed wrzuceniem switcha. Teraz natomiast, wyrzuca w konsoli [instruction] is not recognized as an internal or external command,
-operable program or batch file.*/
