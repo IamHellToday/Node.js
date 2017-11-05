@@ -11,8 +11,6 @@ emitter.on('afterCommand', function(){
 });
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
-    return process.env;
-    return process.versions;
     let input = process.stdin.read();
     if(input !== null) {
         let instruction = input.toString().trim();
@@ -33,4 +31,6 @@ process.stdin.on('readable', function() {
             };
         emitter.emit('afterCommand');
         };
+    return process.env;
+    return process.versions;
 });
