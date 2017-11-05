@@ -1,7 +1,5 @@
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function(){
-    return process.env;
-    return process.versions;
     let input = process.stdin.read();
     if(input !== null) {
         let instruction = input.toString().trim();
@@ -16,6 +14,8 @@ process.stdin.on('readable', function(){
                 break;
             };
         };
+    return process.env;
+    return process.versions;
 });
 
 /*Najpierw działało, przed wrzuceniem switcha. Teraz natomiast, wyrzuca w konsoli [instruction] is not recognized as an internal or external command,
