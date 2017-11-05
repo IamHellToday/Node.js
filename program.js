@@ -1,10 +1,8 @@
-let OSInfo = require('../modules/OSInfo');
+let OSInfo = require('./modules/OSInfo');
 OSInfo.print();
 
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
-    return process.env;
-    return process.versions;
     let input = process.stdin.read();
     if(input !== null) {
         let instruction = input.toString().trim();
@@ -23,4 +21,6 @@ process.stdin.on('readable', function() {
                 break;
             };
         };
+    return process.env;
+    return process.versions;
 });
