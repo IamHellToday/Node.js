@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "first app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamHellToday/Node.js.git"
+  },
+  "author": "krystian jablonski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IamHellToday/Node.js/issues"
+  },
+  "homepage": "https://github.com/IamHellToday/Node.js#readme",
+  "devDependencies": {
+    "colors": "^1.1.2"
+  }
+}

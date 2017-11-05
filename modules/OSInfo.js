@@ -1,4 +1,5 @@
 let os = require('os');
+let colors = require('colors');
 
 function getOsInfo() {
     let type = os.type();
@@ -10,17 +11,17 @@ function getOsInfo() {
         } else if (type === 'Linux') {
             type = 'Linux';
         };
-        console.log('System:', type);
-        console.log('Release:', release);
+        console.log('System:'.grey, type);
+        console.log('Release:'.red, release);
 
     let cpu = os.cpus()[0].model;
-    console.log('Cpu model:', cpu);
+    console.log('Cpu model:'.cyan, cpu);
 
     let uptime = os.uptime();
-    console.log('Uptime:', Math.floor(uptime), 'sec');
+    console.log('Uptime:'.green, Math.floor(uptime), 'sec');
 
     let userInfo = os.userInfo();
-    console.log('User name:', userInfo.username);
-    console.log('Home dir', userInfo.homedir);
+    console.log('User name:'.magenta, userInfo.username);
+    console.log('Home dir'.white, userInfo.homedir);
 }; 
 exports.print = getOsInfo;
