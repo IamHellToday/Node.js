@@ -22,5 +22,6 @@ function getOsInfo() {
     let userInfo = os.userInfo();
     console.log('User name:', userInfo.username);
     console.log('Home dir', userInfo.homedir);
+    process.stderr.write('Choose command between: "/version" "/enviroment" "/exit"');
 }; 
 exports.print = getOsInfo;
