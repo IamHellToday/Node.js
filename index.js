@@ -26,22 +26,22 @@ process.stdin.on('readable', function() {
       }
       case '/version': {
         console.log(process.versions);
-        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSinfo" ');
+        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSInfo" ');
         break;
       }
       case '/enviroment': {
         console.log(process.env);
-        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSinfo" ');
+        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSInfo" ');
         break;
       }
-      case '/getOSinfo': {
+      case '/getOSInfo': {
         getOsInfo();
-        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSinfo" ');
+        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSInfo" ');
         break;
       }
       default: {
         process.stderr.write('Wrong instruction\n');
-        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSinfo" ');
+        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSInfo" ');
         break;
       }
     }
