@@ -1,12 +1,8 @@
-let fs = require('fs');
+let http = require('http');
+let fs = require('./filestats');
 
-fs.readdir('./node_modules', 'utf-8', function(err, stats) {
-    console.log(stats.toString());
-    fs.appendFile('components.txt', stats, 'utf-8', function(err) {
-        if (err) {
-            throw err;
-        } else {
-        console.log(`File has been saved including ${stats} components.`);
-        }
-    });
+let server = http.createServer(function(request, response) {
+    response.write(`Module contains ${stats}`);
+    response.end();
 });
+server.listen(9000);
