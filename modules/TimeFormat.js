@@ -12,4 +12,4 @@ function transformTime (uptime) {
     }
     return hours+':'+minutes+':'+seconds;
 };
-exports.print = transformTime;
+module.exports = transformTime;

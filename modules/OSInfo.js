@@ -1,5 +1,5 @@
 let os = require('os');
-let time = require('./TimeFormat');
+let transformTime = require('./TimeFormat');
 
 function getOsInfo() {
     let type = os.type();
@@ -18,7 +18,7 @@ function getOsInfo() {
     console.log('Cpu model:', cpu);
 
     let uptime = os.uptime();
-    transformTime.transformTime(uptime);
+    transformTime(uptime);
     console.log('Uptime: ' +uptime);
 
     let userInfo = os.userInfo();
@@ -26,4 +26,4 @@ function getOsInfo() {
     console.log('Home dir', userInfo.homedir);
     process.stderr.write('Choose command between: "/version" "/enviroment" "/exit"');
 }; 
-exports.print = getOsInfo;
+module.exports = getOsInfo;
