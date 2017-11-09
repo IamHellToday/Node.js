@@ -1,1 +1,0 @@
-colors,stat-modecolors,stat-mode
