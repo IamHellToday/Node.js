@@ -1,4 +1,5 @@
 let os = require('os');
+let time = require('./TimeFormat');
 
 function getOsInfo() {
     let type = os.type();
@@ -17,7 +18,8 @@ function getOsInfo() {
     console.log('Cpu model:', cpu);
 
     let uptime = os.uptime();
-    console.log('Uptime:', Math.floor(uptime), 'sec');
+    transformTime.transformTime(uptime);
+    console.log('Uptime: ' +uptime);
 
     let userInfo = os.userInfo();
     console.log('User name:', userInfo.username);
