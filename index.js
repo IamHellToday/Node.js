@@ -1,10 +1,9 @@
 let EventEmitter = require("events").EventEmitter;
-let OSInfo = require('./modules/OSInfo');
-OSInfo.print();
+let getOsInfo = require('./modules/OSInfo');
 
 let emitter = new EventEmitter();
 emitter.on("beforeCommand", function(instruction) {
-  console.log("You wrote: " + instruction + "trying to run command.");
+  console.log("You wrote: " + instruction + " trying to run command.");
 });
 emitter.on("afterCommand", function() {
   console.log("Finished command");
@@ -36,7 +35,6 @@ process.stdin.on('readable', function() {
       }
       case '/getOSInfo': {
         getOsInfo();
-        console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSInfo" ');
         break;
       }
       default: {

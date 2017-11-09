@@ -28,4 +28,4 @@ function getOsInfo() {
     console.log('Home dir'.white, userInfo.homedir);
     console.log('Choose command between: "/version" "/enviroment" "/exit" "/getOSInfo" ');
 }; 
-exports.print = getOsInfo;
+module.exports = getOsInfo;
