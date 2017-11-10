@@ -17,9 +17,7 @@ function getOsInfo() {
     let cpu = os.cpus()[0].model;
     console.log('Cpu model:', cpu);
 
-    let uptime = os.uptime();
-    transformTime(uptime);
-    console.log('Uptime: ' +uptime);
+    console.log('Uptime: ' + transformTime(os.uptime()));
 
     let userInfo = os.userInfo();
     console.log('User name:', userInfo.username);
