@@ -1,7 +1,7 @@
 {
-  "name": "Node.js",
+  "name": "Upload server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple upload server",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/IamHellToday/Node.js.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Krystian Jabłoński",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/IamHellToday/Node.js/issues"
