@@ -1,6 +1,15 @@
 let fs = require('fs');
 
-fs.readdir('./node_modules', 'utf-8', function(err, stats) {
-    console.log(stats.toString());
-});
-module.exports = fs;
+let getStats = function () {
+    return new Promise((resolve, reject) => {
+        fs.readdir('./node_modules', 'utf-8', function(err, stats) {
+            if (err) {
+                reject();
+                return 
+            }
+            console.log(stats.toString());
+            resolve(stats.toString());
+        })
+    })
+};
+module.exports = getStats;

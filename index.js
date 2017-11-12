@@ -2,7 +2,12 @@ let http = require('http');
 let fs = require('./filestats');
 
 let server = http.createServer(function(request, response) {
-    response.write(`Module contains ${fs}`);
-    response.end();
+    fs().then((stats) => {
+        response.write(`Module contains ${stats}`);
+        response.end();
+    }).catch(() => {
+        response.write('error');;
+        response.end();
+    })
 });
 server.listen(9000);
