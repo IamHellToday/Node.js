@@ -28,7 +28,7 @@ exports.upload = function(request, response) {
         //Przy wrzucaniu pliku z folderu, test.png
         response.writeHead(200, {"Content-Type": "text/html"});
         response.write("recieved image:<br/>");
-        response.write("img src='/show' />");
+        response.write("<img src='/show' />");
         response.end;
     });
 
