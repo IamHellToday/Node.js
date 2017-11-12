@@ -1,5 +1,5 @@
 {
-  "name": "Upload server",
+  "name": "upload",
   "version": "1.0.0",
   "description": "Simple upload server",
   "main": "index.js",

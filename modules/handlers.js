@@ -11,7 +11,7 @@ exports.welcome = function(request, response) {
     });
 }
 
-exports.show = function(request, repsonse) {
+exports.show = function(request, response) {
     fs.readFile("test.png", "binary", function(err, file) {
         response.writeHead(200, {"Content-Type": "image/png"});
         response.write(file, "binary");
